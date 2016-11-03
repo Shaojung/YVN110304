@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
             m.put("code", codes[i]);
             mylist.add(m);
         }
-        adapter = new SimpleAdapter(MainActivity.this, mylist, android.R.layout.simple_list_item_2,
-                                    new String[] {"city", "code"}, new int[] {android.R.id.text1, android.R.id.text2});
+        adapter = new SimpleAdapter(MainActivity.this, mylist, R.layout.myitem,
+                                    new String[] {"city", "code"}, new int[] {R.id.textView, R.id.textView2});
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(adapter);
 
