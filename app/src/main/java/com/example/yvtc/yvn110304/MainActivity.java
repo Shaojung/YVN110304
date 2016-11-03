@@ -8,6 +8,7 @@ import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     String codes[] = {"02", "04", "06", "07"};
     int[] imgs = {R.drawable.taipei, R.drawable.taichung, R.drawable.tainan, R.drawable.ks};
     ListView lv;
-    ArrayList<Map<String, String>> mylist;
+    ArrayList<Map<String, Object>> mylist;
     SimpleAdapter adapter;
 
     @Override
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mylist = new ArrayList<>();
         for (int i=0;i<=3;i++)
         {
-            Map m = new HashMap();
+            Map<String, Object> m = new HashMap();
             m.put("city", cities[i]);
             m.put("code", codes[i]);
             m.put("img", imgs[i]);
